@@ -6,6 +6,8 @@ import TextField from '@mui/material/TextField';
 import ButtonTheme from './ButtonTheme'
 import { ThemeProvider } from '@mui/material';
 import hopeCenterLogo from '/workspace/mulan-hope-center/reset-password/src/Components/Hope-Center-Logo.png';
+import '/workspace/mulan-hope-center/reset-password/src/App.css';
+import { Link } from 'react';
 
 
 function EnterInfo() {
@@ -17,20 +19,27 @@ function EnterInfo() {
         justifyContent: 'center',
         position: 'center',
         flexWrap: 'wrap',
-        height: '100vh',
+        height: '110vh',
+        position: 'relative'
     }
 
+
     return(
-    <ThemeProvider  theme={ButtonTheme}>
+    <ThemeProvider  theme={ButtonTheme}> 
     <Box style={boxstyle} fullWidth > 
-          
-        < Paper elevation={24} sx={{height: 650, width: 528, background:"#F4E8A7", borderRadius: "50px"}}>
+     
+      <Box>
+          <Box style={{display: 'flex',  justifyContent:'center', alignItems:'center'}}> 
+           <img src={hopeCenterLogo} className='img' width={210} sx={{m:2}} height={100}  alt='hope center logo'/>
+          </Box>
+
+        < Paper elevation={24} sx={{height: 650, width: 528, background:"#FFFFFF", borderRadius: "50px", mt:4}}>
 
           <Typography variant='h3' sx={{textAlign: 'center', color:"#3449B5", fontWeight: 600}} mb={5}>
             Enter your Email or Phone Number To Reset Your Password
           </Typography>
 
-          <Typography variant='h6' sx={{textAlign: 'left', }} mt={3}>
+          <Typography variant='h6' sx={{textAlign: 'left',mt:5, mb:0.5 }} mt={3} m={0.5}>
             Email:
           </Typography>
 
@@ -44,7 +53,7 @@ function EnterInfo() {
           />
 
           
-          <Typography variant='h6' sx={{textAlign: 'left'}} mt={3}>
+          <Typography variant='h6' sx={{textAlign: 'left',mt:5, mb:0.5}} >
             Phone Number:
           </Typography>
           
@@ -63,15 +72,16 @@ function EnterInfo() {
           </Typography>
 
           <Box mt={5} sx={{display:'flex', alignItems: 'center', justifyContent: 'center'}}>
-            <Button  sx={{borderRadius: "500px", backgroundColor:"primary.main", color:"black", width:180,height:80 }}>
-              Submit
-            </Button>
+              <Button  sx={{borderRadius: "500px", backgroundColor:"primary.main", color:"black", width:180,height:80 }}>
+                Submit
+              </Button>
           </Box>
 
         </Paper>
-        
-
+      </Box>
     </Box>
+    
+      
     </ThemeProvider>
     );
 } 
