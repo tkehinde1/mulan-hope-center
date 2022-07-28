@@ -15,14 +15,11 @@ function Form() {
 
   const PageDisplay = () => {
     if (page === 0) {
-      return <SignUpInfo formData={formData} setFormData={setFormData} />;
-    } else if (page === 1) {
-      return <EnterInfo formData={formData} setFormData={setFormData} />;
-    } else if (page === 2){
+    } else if (page === 1){
       return <ForgotPasswordVerify formData={formData} setFormData={setFormData} />;
-    } else if (page === 3){
+    } else if (page === 1){
       return <Address formData={formData} setFormData={setFormData} />;
-    }else if (page === 4) {
+    }else if (page === 2) {
       return <DeleteAccount formData={formData} setFormData={setFormData} />;
     }
   };
