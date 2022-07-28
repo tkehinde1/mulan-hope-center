@@ -17,7 +17,7 @@ const theme = createTheme({
       darker: '#053e85',
     },
     neutral: {
-      main: '#F4E8A7',
+      main: 'white',
       contrastText: 'black',
     },
   },
@@ -78,7 +78,7 @@ function TwoFactor() {
       
       <IconToolbar>
 
-      <Link href="#" fontSize={21} underline="always" sx={{color: '#F4E8A7'}}>
+      <Link href="#" fontSize={21} underline="always" sx={{color: 'white'}}>
       Back
     </Link>
 
@@ -88,7 +88,9 @@ function TwoFactor() {
 
       <img
       src='https://i.imgur.com/mNCgw20.png'
-      alt='Hope Center Logo'
+      alt='Logo'
+      width= "132px"
+      height= "80px"
       />
 
       </IconToolbar>
@@ -144,7 +146,7 @@ function TwoFactor() {
 
 {/* <img className="photo" src="images/qrcode.png"/> */}
 
-    <Link href="#" fontSize={21} display= "flex" justifyContent= "center" underline="always" sx={{color: '#F4E8A7'}}>
+    <Link href="#" fontSize={21} display= "flex" justifyContent= "center" underline="always" sx={{color: 'white'}}>
     Remind Me Later
     </Link>
 

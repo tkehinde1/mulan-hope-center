@@ -18,7 +18,7 @@ const theme = createTheme({
       darker: '#053e85',
     },
     neutral: {
-      main: '#F4E8A7',
+      main: 'white',
       contrastText: 'black',
     },
   },
@@ -79,7 +79,7 @@ function TwoFactorTwo() {
       
       <IconToolbar>
 
-      <Link href="#" fontSize={21} underline="always" sx={{color: '#F4E8A7'}}>
+      <Link href="#" fontSize={21} underline="always" sx={{color: 'white'}}>
       Back
     </Link>
 
@@ -89,8 +89,9 @@ function TwoFactorTwo() {
 
       <img
       src='https://i.imgur.com/mNCgw20.png'
-      alt='Hope Center Logo'
-      className='img'
+      alt='Logo'
+      width= "132px"
+      height= "80px"
       />
 
       </IconToolbar>
@@ -131,49 +132,61 @@ function TwoFactorTwo() {
       <StyledToolbar>
       <Box
       sx={{
-        background: "#F4E8A7",
-        width: 75,
-        height: 75,
+        background: "white",
+        width: 80,
+        height: 80,
+        marginBottom: 3,
+        marginTop: 3,
       }}
       />
 
 <Box
       sx={{
-        background: "#F4E8A7",
-        width: 75,
-        height: 75,
+        background: "white",
+        width: 80,
+        height: 80,
+        marginBottom: 3,
+        marginTop: 3,
       }}
       />
 
 <Box
       sx={{
-        background: "#F4E8A7",
-        width: 75,
-        height: 75,
+        background: "white",
+        width: 80,
+        height: 80,
+        marginBottom: 3,
+        marginTop: 3,
       }}
       />
 
 <Box
       sx={{
-        background: "#F4E8A7",
-        width: 75,
-        height: 75,
+        background: "white",
+        width: 80,
+        height: 80,
+        marginBottom: 3,
+        marginTop: 3,
       }}
       />
 
 <Box
       sx={{
-        background: "#F4E8A7",
-        width: 75,
-        height: 75,
+        background: "white",
+        width: 80,
+        height: 80,
+        marginBottom: 3,
+        marginTop: 3,
       }}
       />
 
 <Box
       sx={{
-        background: "#F4E8A7",
-        width: 75,
-        height: 75,
+        background: "white",
+        width: 80,
+        height: 80,
+        marginBottom: 3,
+        marginTop: 3,
       }}
       />
 
@@ -191,7 +204,7 @@ function TwoFactorTwo() {
 
         </Grid>
 
-      <Link href="#" fontSize={21} display= "flex" justifyContent= "center" underline="always" sx={{color: '#F4E8A7'}}>
+      <Link href="#" fontSize={21} display= "flex" justifyContent= "center" underline="always" sx={{color: 'white'}}>
     Change Verification Type
     </Link>
 
