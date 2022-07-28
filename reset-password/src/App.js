@@ -4,12 +4,16 @@ import './App.css';
 import Paper from '@mui/material/Paper';
 import { Box, Typography } from '@mui/material';
 import Button from '@mui/material/Button';
-import EnterInfo from './Components/EnterInfo';
+import EnterInfo from './Components/EnterInfo.js';
+import EnterCode from './Components/EnterCode.js';
+import NewPassword from './Components/NewPassword.js';
 
 
 function App() {
   return (
-    <EnterInfo/>
+     //<EnterInfo/>
+      //<EnterCode/>
+      <NewPassword/>
   );
 }
 
