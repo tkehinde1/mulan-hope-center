@@ -1,4 +1,4 @@
-import React from 'react'; 
+import React,{useState} from 'react'; 
 import Paper from '@mui/material/Paper';
 import { Box, Typography, TextField } from '@mui/material';
 import Button from '@mui/material/Button';
@@ -9,6 +9,8 @@ import { useNavigate } from 'react-router-dom';
 /*import hopeCenterLogo from '/workspace/mulan-hope-center/reset-password/src/Components/Hope-Center-Logo.png';*/
 
 function SignUp() {
+  let navigate = useNavigate();
+  const [showPassword,setShowPassword] = useState(false);
     const boxstyle = {
         background: "#3449B5",
         display: 'flex',
@@ -93,6 +95,8 @@ function SignUp() {
           sx={{mt:1, background:"#FFFFFF",borderRadius:'50px', align:"center", width:330, height:30}}
           InputProps={{ style: { fontSize: 27, align: "center", width:330, height:30, borderRadius:'50px' } }}
           InputLabelProps={{ style: { fontSize: 27, align: "center" } }}
+          type={showPassword ? 'text' : 'password'}
+
         />
 
         <Typography variant='h6' sx={{textAlign: "justify", color: "#FFFFFF", fontWeight: 500}} mt={3}>
@@ -104,10 +108,12 @@ function SignUp() {
           sx={{mt:1, background:"#FFFFFF",borderRadius:'50px', align:"center", width:330, height:30}}
           InputProps={{ style: { fontSize: 27, align: "center", width:330, height:30, borderRadius:'50px' } }}
           InputLabelProps={{ style: { fontSize: 27, align: "center" } }}
+          type={showPassword ? 'text' : 'password'}
         />
 
         <Box mt={5} sx={{display:'flex', alignItems: 'center', justifyContent: 'center'}}>
             <Button
+            onClick={() => {navigate("/2FA")}}
             sx={{borderRadius: "500px", 
             backgroundColor:"primary.main", 
             color:"black", 
