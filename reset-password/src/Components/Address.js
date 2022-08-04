@@ -1,13 +1,17 @@
 import * as React from 'react'; 
 import Paper from '@mui/material/Paper';
-import { Box, Typography } from '@mui/material';
+import { Box, Typography, Stack } from '@mui/material';
 import Button from '@mui/material/Button';
 import TextField from '@mui/material/TextField';
 import ButtonTheme from './ButtonTheme'
 import { ThemeProvider } from '@mui/material';
+import { useNavigate } from 'react-router-dom';
+import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import hopeCenterLogo from '/workspace/mulan-hope-center/reset-password/src/Components/Hope-Center-Logo.png';
 
 function Address({ formData, setFormData }) {
+
+let navigate = useNavigate();
 
 const boxstyle = {
         background: "#3449B5",
@@ -23,10 +27,16 @@ const boxstyle = {
   return (
     <div className="sign-up-container">
     <ThemeProvider  theme={ButtonTheme}>
-    <Box style={boxstyle} fullWidth > 
-          
-        < Paper elevation={24} sx={{height: 650, width: 528, background:"#", borderRadius: "50px"}}>
+      <Box backgroundColor= "#3449B5" fullWidth>
+          <Stack direction= "row" spacing= "2" justifyContent="space-between" background= "#3449B5">
+              <Button onClick={() => {navigate("/Home")}} variant="contained" size="Small" startIcon={<ArrowBackIcon/>}>Back</Button>
+              <img src="https://hopecenters.net/wp-content/uploads/2018/10/Hope-Center-Logo.png" height={100} width={125} alt="HopeCenter"/>
+          </Stack>
+      </Box>
 
+         <Box style={boxstyle}> 
+        < Paper elevation={24} sx={{height: 650, width: 528, background:"#", borderRadius: "50px", position:"center"}} >
+         
           <Typography variant='h4' sx={{textAlign: 'center', color:"black", fontWeight: 600}} mb={5}>      
           Address
            </Typography>
@@ -58,9 +68,9 @@ const boxstyle = {
           </Box>
 
         </Paper>
-        
+        </Box>
 
-    </Box>
+
     </ThemeProvider>
 
     </div>
