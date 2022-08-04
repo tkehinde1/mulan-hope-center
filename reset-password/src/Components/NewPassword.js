@@ -12,8 +12,10 @@ import { Link } from 'react';
 import Checkbox from '@mui/material/Checkbox';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import { pink } from '@mui/material/colors';
-function NewPassword() {
+import { useNavigate } from 'react-router-dom';
 
+function NewPassword() {
+  let navigate = useNavigate();
     const boxstyle = {
         background: "#3449B5",
         display: 'flex',
@@ -67,6 +69,7 @@ function NewPassword() {
           sx={{mt:0.5, background:"#D7D1B3", borderRadius:'80px'}}
           InputProps={{ style: { fontSize: 24 } }}
           InputLabelProps={{ style: { fontSize: 24 } }}
+          type={showPassword ? 'text' : 'password'}
             />
 
 
@@ -78,7 +81,7 @@ function NewPassword() {
           </Typography> */}
 
           <Box mt={5} sx={{display:'flex', alignItems: 'center', justifyContent: 'center'}}>
-              <Button  sx={{borderRadius: "500px", backgroundColor:"primary.main", color:"black", width:180,height:80 }}>
+              <Button onClick={() => {navigate("/")}} sx={{borderRadius: "500px", backgroundColor:"primary.main", color:"black", width:180,height:80 }}>
                 Submit
               </Button>
           </Box>
