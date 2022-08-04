@@ -1,93 +1,71 @@
-import * as React from 'react'; 
-
-import { Box, Typography, Paper, Button, TextField, ThemeProvider } from '@mui/material';
+import * as React from 'react';
+import { Box, Typography, Paper, Button, TextField, } from '@mui/material';
 import logo from "./Hope-Center-Logo.png";
-import ButtonTheme from './ButtonTheme';
-
-
-
-
+import styled from '@emotion/styled';
+import { useNavigate } from 'react-router-dom';
 
 function Login() {
-
+  let navigate = useNavigate();
+    const StyledText = styled(TextField)({
+      display: "flex",
+      justify: "middle"
+    })
     const boxstyle = {
-        background: "#3448B5",
+        background: "#fffffff",
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
         position: 'center',
         flexWrap: 'wrap',
-        height: '100vh',
+        height: '242',
     }
-
     return(
-    
-    <ThemeProvider  theme={ButtonTheme}>
-    
-    <Box style={boxstyle} fullWidth > 
-          
-        <Paper elevation={24} sx={{height: 1166, width: 724, background:"#5AA6C4", borderRadius: "50px"}}>
-          <Box sx={{display:'flex', alignItems: 'center', justifyContent: 'center'}}>
-          <img src={logo} alt="Hope Center Logo" align="center" width="532" height="312"/>
+    <Box style={boxstyle} fullWidth >
+        <Paper elevation={24} sx={{height: 1166, width: 724, background:"#3448B5", borderRadius: "50px"}}>
+          <Box mt={5} sx={{display:'flex', alignItems: 'center', justifyContent: 'center'}}>
+          <img src={logo} alt="Hope Center Logo" align="center" width="532" height="242"/>
           </Box>
-          
-        
           {/* <Typography variant='h3' sx={{textAlign: 'center', color:"#3449B5", fontWeight: 600}} mb={5}>
-            
             Login
           </Typography> */}
-
-          <Typography variant='h6' sx={{textAlign: 'left', }} mt={3}>
+          <Typography variant='h6' sx={{textAlign: 'left', fontSize: '36px', color: '#D8DBDE', marginLeft: 3}} mt={3}>
             Username:
           </Typography>
-
           <TextField
           variant="filled"
-          fullWidth
           placeholder='Username Here'
-          sx={{mt:0.5, background:"#D7D1B3",borderRadius:'80px', color:'black'}}
-          InputProps={{ style: { fontSize: 24 } }}
-          InputLabelProps={{ style: { fontSize: 24 } }}
+          sx={{mt:0.5, marginLeft: 2, background:"#D8DBDE", borderRadius:'80px', color:'black', width:'692px', }}
+          InputProps={{ style: { fontSize: 36} }}
+          InputLabelProps={{ style: { fontSize: 36 } }}
+          a
           />
-
-          
-          <Typography variant='h6' sx={{textAlign: 'left'}} mt={3}>
+          <Typography variant='h6' sx={{textAlign: 'left', fontSize: '36px', color: '#D8DBDE', marginLeft: 3}} mt={10}>
             Password:
           </Typography>
-          
-
-          <TextField
+          <StyledText
           type = "password"
           variant="filled"
           fullWidth
           placeholder='Password Here'
-          sx={{mt:0.5, background:"#D7D1B3", borderRadius:'80px'}}
-          InputProps={{ style: { fontSize: 24 } }}
-          InputLabelProps={{ style: { fontSize: 24 } }}
+          sx={{mt:0.5, marginLeft: 2, background:"#D8DBDE", borderRadius:'80px', color:'black', width:'692px', }}
+          InputProps={{ style: { fontSize: 36 } }}
+          InputLabelProps={{ style: { fontSize: 36 } }}
             />
-
-          
-
           <Box mt={5} sx={{display:'flex', alignItems: 'center', justifyContent: 'center'}}>
-            <Button  sx={{borderRadius: "500px", backgroundColor:"primary.main", color:"black", width:180,height:80 }}>
+            <Button onClick={() => {navigate("/Home")}} sx={{borderRadius: "500px", backgroundColor:'#D8D8DE', color:'#0D0D0E', width:280 ,height:100, fontSize: '18px' }}>
               Login
             </Button>
           </Box>
-          <Box mt={5} sx={{display:'flex', alignItems: 'center', justifyContent: 'center'}}>
-          <Button  sx={{borderRadius: "500px", backgroundColor:"primary.main", color:"black", width:180,height:80 }}>
-              Forgot Password 
+          <Box  mt={10} sx={{display:'flex', alignItems: 'center', justifyContent: 'center'}}>
+          <Button onClick={() => {navigate("/EnterInfo")}} sx={{borderRadius: "500px", backgroundColor:'#D8D8DE', color:'#0D0D0E', width:280, height:100,  fontSize: '18px', marginRight: 3 }}>
+              Forgot Password
             </Button>
-            <Button  sx={{ display:"flex", borderRadius: "500px", backgroundColor:"primary.main", color:"black", width:180,height:80, justify: "space-evenly" }}>
+            <Button onClick={() => {navigate("/SignUp")}} sx={{ display:"flex", borderRadius: "500px", backgroundColor:'#D8D8DE', color:'#0D0D0E', width:280, height:100, justify: "space-evenly", fontSize: '18px', marginLeft: 3 }}>
               Sign Up
             </Button>
           </Box>
-
         </Paper>
-        
-
     </Box>
-    </ThemeProvider>
     );
-} 
-
+}
 export default Login;
