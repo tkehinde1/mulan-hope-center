@@ -1,9 +1,9 @@
-@import url(https://fonts.googleapis.com/css?family=Montserrat);
+/* @import url(https://fonts.googleapis.com/css?family=Montserrat);
 
 .App {
   background: #3449B5;
   width: 100vw;
-  height: 175vh;
+  height: 100vh;
   display: grid;
   place-items: center;
 }
@@ -24,36 +24,8 @@ body {
 }
 
 
-.form-container .header {
-  flex: 20%;
-  display: grid;
-  place-items: center;
-}
 
-.form-container .body {
-  flex: 60%;
-}
 
-.form-container .footer {
-  flex: 20%;
-  display: flex;
-  justify-content: center;
-}
-
-.form-container .footer button {
-  border-radius: 7px;
-  width: 100px;
-  height: 40px;
-  background-color: #ffffff;
-  font-weight: bold;
-  color: rgb(0, 0, 0);
-  border: 0 none;
-  border-radius: 1px;
-  cursor: pointer;
-  padding: 10px 5px;
-  margin: 10px 5px;
-  margin: 5px;
-}
 
 .sign-up-container {
   height: 100%;
@@ -129,11 +101,39 @@ input {
 }
 
 input:focus {
-  border: 3px solid rgb(98, 0, 255);
-}
-.img {
-  filter:drop-shadow(0px 0px 40px #ffffff);
-}
+  border: 3px solid hsl(263, 100%, 50%);
+} */
+
 .img {
   filter: drop-shadow(0px 0px 40px rgb(255, 255, 255));
+}
+.form-container .footer button {
+  border-radius: 7px;
+  width: 180px;
+  height: 80px;
+  background-color: #D7D1B3;
+  font-weight: bold;
+  color: rgb(0, 0, 0);
+  border: 10;
+  border-radius: 500px;
+  cursor: pointer;
+  padding: 10px 5px;
+  margin: 10px 5px;
+  margin: 5px;
+}
+
+.form-container .header {
+  flex: 20%;
+  display: grid;
+  place-items: center;
+}
+
+.form-container .body {
+  flex: 60%;
+}
+
+.form-container .footer {
+  flex: 20%;
+  display: flex;
+  justify-content: center;
 }
