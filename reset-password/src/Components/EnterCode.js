@@ -7,10 +7,10 @@ import ButtonTheme from './ButtonTheme'
 import { ThemeProvider } from '@mui/material';
 import hopeCenterLogo from '/workspace/mulan-hope-center/reset-password/src/Components/Hope-Center-Logo.png';
 import '/workspace/mulan-hope-center/reset-password/src/App.css';
-
+import { useNavigate } from 'react-router-dom';
 
 function EnterCode() {
-
+  let navigate = useNavigate();
     const boxstyle = {
         background: "#3449B5",
         display: 'flex',
@@ -49,7 +49,7 @@ function EnterCode() {
 
           
           <Box mt={5} sx={{display:'flex', alignItems: 'center', justifyContent: 'center'}}>
-            <Button  sx={{borderRadius: "500px", backgroundColor:"primary.main", color:"black", width:180,height:80 }}>
+            <Button  onClick={() => {navigate("/NewPassword")}} sx={{borderRadius: "500px", backgroundColor:"primary.main", color:"black", width:180,height:80 }}>
               Submit
             </Button>
           </Box>
