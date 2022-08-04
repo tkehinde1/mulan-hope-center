@@ -4,6 +4,7 @@ import Button from '@mui/material/Button';
 import ButtonTheme from './ButtonTheme'
 import { ThemeProvider } from '@mui/material';
 import SettingsIcon from '@mui/icons-material/Settings';
+import { useNavigate } from 'react-router-dom';
 
 const boxstyle = {
     background: "#3449B5",
@@ -15,6 +16,7 @@ const boxstyle = {
 }
 
 function HomePage() {
+    let navigate = useNavigate();
     return (
             <ThemeProvider  theme={ButtonTheme}>
             <Box backgroundColor= "#3449B5" fullWidth>
@@ -26,6 +28,7 @@ function HomePage() {
             <div>
             <Box style={boxstyle} sx={{ '& button': { m: 2 } }}>
             <Button
+            onClick={() => {navigate("/Donation")}}
              size="large"
              variant="contained"
              href=""
