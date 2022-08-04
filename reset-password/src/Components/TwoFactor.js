@@ -2,9 +2,10 @@ import { Button, TextField, Typography, Toolbar, Grid, ImageList, ImageListItem,
 import * as React from 'react'
 import styled from '@emotion/styled';
 import MailIcon from '@mui/icons-material/Mail';
-import PhoneIphoneIcon from '@mui/icons-material/PhoneIphone';
+import PhoneIphoneIcon from '@mui/icons-material/PhoneIphone'
 import { createTheme, ThemeProvider  } from '@mui/material/styles';
 import { Container } from '@mui/system';
+import { useNavigate } from 'react-router-dom';
 
 
 const theme = createTheme({
@@ -60,6 +61,7 @@ const StyledToolbar = styled(Toolbar)({
 ]
 
 function TwoFactor() {
+  let navigate = useNavigate();
   return (
     
     <div
@@ -113,7 +115,7 @@ function TwoFactor() {
     </ThemeProvider>
     
     <ThemeProvider theme={theme}>
-        <Button color="neutral" variant="contained">
+        <Button onClick={() => {navigate("/2FA2")}} color="neutral" variant="contained">
            Submit
         </Button>
       </ThemeProvider>
@@ -146,7 +148,7 @@ function TwoFactor() {
 
 {/* <img className="photo" src="images/qrcode.png"/> */}
 
-    <Link href="#" fontSize={21} display= "flex" justifyContent= "center" underline="always" sx={{color: 'white'}}>
+    <Link onClick={() => {navigate("/Home")}} href="#" fontSize={21} display= "flex" justifyContent= "center" underline="always" sx={{color: 'white'}}>
     Remind Me Later
     </Link>
 
