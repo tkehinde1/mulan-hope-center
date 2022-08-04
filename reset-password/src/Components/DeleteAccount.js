@@ -6,10 +6,11 @@ import TextField from '@mui/material/TextField';
 import ButtonTheme from './ButtonTheme'
 import { ThemeProvider } from '@mui/material';
 import hopeCenterLogo from '/workspace/mulan-hope-center/reset-password/src/Components/Hope-Center-Logo.png';
+import { useNavigate } from 'react-router-dom';
 
 function DeleteAccount({ formData, setFormData }) {
-const [page, setPage] = useState(0);
-
+const [page, setPage] = useState(5);
+let navigate = useNavigate();
 const boxstyle = {
         background: "#3449B5",
         display: 'flex',
@@ -38,7 +39,9 @@ const boxstyle = {
 
           
           <Box mt={5} sx={{display:'flex', alignItems: 'center', justifyContent: 'center'}}>
-            <Button  sx={{
+            <Button 
+            // onClick={() => {navigate("/Home")}}  
+            sx={{
               borderRadius: "500px", 
               backgroundColor:"red", 
               color:"white", 
@@ -53,9 +56,7 @@ const boxstyle = {
             <Button  sx={{borderRadius: "500px", backgroundColor:"#DEE2E8", color:"black", 
             width:180,
             height:80 }}
-            onClick={() => {
-              setPage((currPage) => currPage - 1);
-            }}
+            onClick={() => {navigate("/AccountPage")}}
           >
               Go Back
             </Button>
