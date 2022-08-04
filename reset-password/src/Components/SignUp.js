@@ -1,13 +1,14 @@
-import * as React from 'react'; 
+import React from 'react'; 
 import Paper from '@mui/material/Paper';
 import { Box, Typography, TextField } from '@mui/material';
 import Button from '@mui/material/Button';
 import ButtonTheme from './ButtonTheme'
 import { ThemeProvider } from '@mui/material';
+import { useNavigate } from 'react-router-dom';
+
 /*import hopeCenterLogo from '/workspace/mulan-hope-center/reset-password/src/Components/Hope-Center-Logo.png';*/
 
 function SignUp() {
-
     const boxstyle = {
         background: "#3449B5",
         display: 'flex',
@@ -106,7 +107,15 @@ function SignUp() {
         />
 
         <Box mt={5} sx={{display:'flex', alignItems: 'center', justifyContent: 'center'}}>
-            <Button  sx={{borderRadius: "500px", backgroundColor:"primary.main", color:"black", width:250,height:60, background:"#FFFFFF" }}>
+            <Button
+            sx={{borderRadius: "500px", 
+            backgroundColor:"primary.main", 
+            color:"black", 
+            width:250,
+            height:60, 
+            background:"#FFFFFF" }}
+            
+            >
               Submit
             </Button>
           </Box>
