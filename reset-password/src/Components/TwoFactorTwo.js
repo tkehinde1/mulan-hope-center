@@ -7,6 +7,7 @@ import { createTheme, ThemeProvider  } from '@mui/material/styles';
 import { Container } from '@mui/system';
 import CheckIcon from '@mui/icons-material/Check';
 import CloseIcon from '@mui/icons-material/Close';
+import { useNavigate } from 'react-router-dom';
 
 const theme = createTheme({
   status: {
@@ -61,6 +62,7 @@ const StyledToolbar = styled(Toolbar)({
 ]
 
 function TwoFactorTwo() {
+  let navigate = useNavigate();
   return (
     
     <div
@@ -79,7 +81,7 @@ function TwoFactorTwo() {
       
       <IconToolbar>
 
-      <Link href="#" fontSize={21} underline="always" sx={{color: 'white'}}>
+      <Link onClick={() => {navigate("/2FA")}} href="#" fontSize={21} underline="always" sx={{color: 'white'}}>
       Back
     </Link>
 
@@ -194,9 +196,14 @@ function TwoFactorTwo() {
 
         <Grid align="center">
 
-        <Box marginBottom={2}>
+        <Box 
+        
+        marginBottom={2}>
         <ThemeProvider theme={theme}>
-        <Button color="neutral" variant="contained">
+        <Button 
+        onClick={() => {navigate("/Home")}}
+        color="neutral" 
+        variant="contained">
            Submit
         </Button>
       </ThemeProvider>
@@ -216,3 +223,4 @@ function TwoFactorTwo() {
 }
 
 export default TwoFactorTwo;
+
