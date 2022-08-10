@@ -21,7 +21,8 @@ function HomePage() {
             <ThemeProvider  theme={ButtonTheme}>
             <Box backgroundColor= "#3449B5" fullWidth>
                 <Stack direction= "row" spacing= "2" justifyContent="space-between" background= "#3449B5">
-                    <Button variant="contained" size="large" startIcon={<SettingsIcon />}/>
+                    <Button variant="contained" size="large" startIcon={<SettingsIcon />} onClick={() => {navigate("/SettingsP")}}
+/>
                     <img src="https://hopecenters.net/wp-content/uploads/2018/10/Hope-Center-Logo.png" height={100} width={125} alt="HopeCenter"/>
                 </Stack>
             </Box>
