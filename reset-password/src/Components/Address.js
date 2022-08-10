@@ -29,7 +29,7 @@ const boxstyle = {
     <ThemeProvider  theme={ButtonTheme}>
       <Box backgroundColor= "#3449B5" fullWidth>
           <Stack direction= "row" spacing= "2" justifyContent="space-between" background= "#3449B5">
-              <Button onClick={() => {navigate("/Home")}} variant="contained" size="Small" startIcon={<ArrowBackIcon/>}>Back</Button>
+              <Button onClick={() => {navigate("/SettingsP")}} variant="contained" size="Small" startIcon={<ArrowBackIcon/>}>Back</Button>
               <img src="https://hopecenters.net/wp-content/uploads/2018/10/Hope-Center-Logo.png" height={100} width={125} alt="HopeCenter"/>
           </Stack>
       </Box>
