@@ -110,6 +110,7 @@ function DonationP() {
          margin= "0 10px"
          >Item Wishlist</Button>
         <Button
+        onClick={() => {navigate("/TYDonation")}}
          size="large"
          variant="contained"
          href=""
