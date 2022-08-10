@@ -1,4 +1,4 @@
-import * as React from 'react';
+import  React,{useState} from 'react';
 import { Box, Typography, Paper, Button, TextField, } from '@mui/material';
 import logo from "./Hope-Center-Logo.png";
 import styled from '@emotion/styled';
@@ -6,6 +6,7 @@ import { useNavigate } from 'react-router-dom';
 
 function Login() {
   let navigate = useNavigate();
+
     const StyledText = styled(TextField)({
       display: "flex",
       justify: "middle"
@@ -32,25 +33,31 @@ function Login() {
             Username:
           </Typography>
           <TextField
-          variant="filled"
-          placeholder='Username Here'
-          sx={{mt:0.5, marginLeft: 2, background:"#D8DBDE", borderRadius:'80px', color:'black', width:'692px', }}
-          InputProps={{ style: { fontSize: 36} }}
-          InputLabelProps={{ style: { fontSize: 36 } }}
-          a
-          />
+           variant="filled"
+           placeholder='Username Here'
+           sx={{mt:0.5, marginLeft: 2, background:"#D8DBDE", borderRadius:'80px', color:'black', width:'692px', }}
+           InputProps={{ style: { fontSize: 36} }}
+           InputLabelProps={{ style: { fontSize: 36 } }}
+      />
+
           <Typography variant='h6' sx={{textAlign: 'left', fontSize: '36px', color: '#D8DBDE', marginLeft: 3}} mt={10}>
             Password:
           </Typography>
+
+
+          
+          
           <StyledText
-          type = "password"
+          type="Password"
           variant="filled"
           fullWidth
           placeholder='Password Here'
           sx={{mt:0.5, marginLeft: 2, background:"#D8DBDE", borderRadius:'80px', color:'black', width:'692px', }}
           InputProps={{ style: { fontSize: 36 } }}
           InputLabelProps={{ style: { fontSize: 36 } }}
-            />
+            />          
+    
+
           <Box mt={5} sx={{display:'flex', alignItems: 'center', justifyContent: 'center'}}>
             <Button onClick={() => {navigate("/Home")}} sx={{borderRadius: "500px", backgroundColor:'#D8D8DE', color:'#0D0D0E', width:280 ,height:100, fontSize: '18px' }}>
               Login
@@ -69,3 +76,6 @@ function Login() {
     );
 }
 export default Login;
+
+
+
