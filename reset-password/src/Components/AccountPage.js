@@ -57,7 +57,7 @@ function Account ({mode,setMode}) {
     <ThemeProvider  theme={ButtonTheme}>
       <Box   sx={{display:'flex', alignItems: 'center', }} style={boxstyle1}>
     <ArrowLeftIcon sx={{ fontSize: 40 }}/>
-  <Button justifyContent="flex-start" style={{ maxWidth: "100px",minWidth: "100px", maxHeight: "30px",minHeight: "30px"}} type="submit" size="large" variant="contained">
+  <Button onClick={() => {navigate("/SettingsP")}} justifyContent="flex-start" style={{ maxWidth: "100px",minWidth: "100px", maxHeight: "30px",minHeight: "30px"}} type="submit" size="large" variant="contained">
   Back
 </Button>
   </Box>
@@ -88,4 +88,10 @@ function Account ({mode,setMode}) {
   );
 };
 export default Account;
+
+
+
+
+
+
 
